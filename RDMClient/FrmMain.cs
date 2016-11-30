@@ -32,13 +32,14 @@ namespace RDMClient
 
         private void txtPseudo_TextChanged(object sender, EventArgs e)
         {
-            btDeconnecter.Enabled = (!String.IsNullOrWhiteSpace(txtPassword.Text));
+            _rdmDal.PseudoConnect = txtPseudo.Text;
+            btConnecter.Enabled = (!String.IsNullOrWhiteSpace(txtPseudo.Text));
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            _rdmDal.PseudoConnect = txtPseudo.Text;
-            btConnecter.Enabled = (!String.IsNullOrWhiteSpace(txtPseudo.Text));
+            
+            btDeconnecter.Enabled = (!String.IsNullOrWhiteSpace(txtPassword.Text));
         }
         #endregion
 
