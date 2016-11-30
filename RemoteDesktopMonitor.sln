@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumeWebServiceRest", "ConsumeWebServiceRest\ConsumeWebServiceRest.csproj", "{BCBE9432-E1C2-4064-8295-E0DC82C43063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDMDALWSR", "RDMDALWSR\RDMDALWSR.csproj", "{081E97D3-6CA3-4ED7-B790-F913DDD1D2A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDMService", "RDMService\RDMService.csproj", "{6347770C-4F4A-4173-A2A8-83FF1D70A665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDMClient", "RDMClient\RDMClient.csproj", "{439B3486-D701-4E29-8C3A-40310D35BD33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCBE9432-E1C2-4064-8295-E0DC82C43063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCBE9432-E1C2-4064-8295-E0DC82C43063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCBE9432-E1C2-4064-8295-E0DC82C43063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCBE9432-E1C2-4064-8295-E0DC82C43063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{081E97D3-6CA3-4ED7-B790-F913DDD1D2A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{081E97D3-6CA3-4ED7-B790-F913DDD1D2A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{081E97D3-6CA3-4ED7-B790-F913DDD1D2A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{081E97D3-6CA3-4ED7-B790-F913DDD1D2A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6347770C-4F4A-4173-A2A8-83FF1D70A665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6347770C-4F4A-4173-A2A8-83FF1D70A665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6347770C-4F4A-4173-A2A8-83FF1D70A665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6347770C-4F4A-4173-A2A8-83FF1D70A665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439B3486-D701-4E29-8C3A-40310D35BD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439B3486-D701-4E29-8C3A-40310D35BD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439B3486-D701-4E29-8C3A-40310D35BD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439B3486-D701-4E29-8C3A-40310D35BD33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
