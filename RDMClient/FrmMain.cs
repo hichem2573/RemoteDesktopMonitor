@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RDMDALWSR;
 using System.Threading;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace RDMClient
 {
@@ -23,8 +25,8 @@ namespace RDMClient
             _rdmDal.StringConnect = ADR_SERVICE_DEBUG;
         }
 
-        #region "Texte Changed"
 
+        #region "Evenements"
         private void txtWebService_TextChanged(object sender, EventArgs e)
         {
             _rdmDal.StringConnect = txtWebService.Text;
@@ -41,9 +43,8 @@ namespace RDMClient
             
             btDeconnecter.Enabled = (!String.IsNullOrWhiteSpace(txtPassword.Text));
         }
-        #endregion
 
-        #region "Evenement clique"
+
         private async void btConnecter_Click(object sender, EventArgs e)
         {
             pnlConnexion.Enabled = false;
@@ -83,6 +84,46 @@ namespace RDMClient
             txtPseudo.Enabled = true;
             txtPassword.Text = String.Empty;
         }
+
+        private void lstbPseudos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void lstbPseudos_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
         #endregion
+
+        #region "Méthode perso"
+
+        private void AfficheListPseudos(RdmDalWSRResult ret)
+        {
+            List<String> lstret = (List<string>)ret.Data;
+
+            // Ajout d'un pseudo à la liste
+            foreach(string pseudo in lstret)
+            {
+                if (!lstbPseudos.Items.Contains(pseudo))
+                {
+                    lstbPseudos.Items.Add(pseudo);
+                }
+
+            }
+
+            // suppression pseudo de la liste 
+            for(int i = lstbPseudos.Items.Count -1 ; i >= 0; i++)
+            {
+                if (!lstret.Contains(lstbPseudos.Items[i]))
+                {
+                    lstbPseudos.Items.RemoveAt(i);
+                }
+            }
+            
+        }
+        #endregion
+
+
     }
 }

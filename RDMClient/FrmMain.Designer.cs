@@ -92,6 +92,8 @@
             this.lstbPseudos.Name = "lstbPseudos";
             this.lstbPseudos.Size = new System.Drawing.Size(218, 199);
             this.lstbPseudos.TabIndex = 1;
+            this.lstbPseudos.DoubleClick += new System.EventHandler(this.lstbPseudos_DoubleClick);
+            this.lstbPseudos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstbPseudos_KeyPress);
             // 
             // grBoxIdentification
             // 
