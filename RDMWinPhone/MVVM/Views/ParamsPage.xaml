@@ -10,8 +10,8 @@
 
     <Page.BottomAppBar>
         <CommandBar ClosedDisplayMode="Minimal">
-            <AppBarButton x:Name="mnuValider" x:Uid="ParmasPage_MnuVal" Icon="Accept" Label="Valider"/>
-            <AppBarButton x:Name="mnuAnnuler" x:Uid="ParmasPage_MnuAnn" Icon="Cancel"  Label="Annuler"/>
+            <AppBarButton x:Name="mnuValider" x:Uid="ParmasPage_MnuVal" Icon="Accept" Label="Valider" Click="mnuValider_Click"/>
+            <AppBarButton x:Name="mnuAnnuler" x:Uid="ParmasPage_MnuAnn" Icon="Cancel"  Label="Annuler" Click="mnuAnnuler_Click"/>
         </CommandBar>
     </Page.BottomAppBar>
     <Grid>
@@ -30,7 +30,7 @@
         <TextBlock x:Uid="ParamsPage_Adr" Grid.Row="1" Grid.Column="0"  Text="Adress :"  FontSize="16" VerticalAlignment="Center"/>
         <TextBox x:Name="txtAdrBase" Grid.Row="1" Grid.Column="1" FontSize="16" Margin="10,0,0,10" InputScope="Url" Grid.ColumnSpan="2" />
         
-        <TextBlock x:Uid="ParamsPage_Adr" Grid.Row="2" Grid.Column="0"  Text="Adress :"  FontSize="16" VerticalAlignment="Center"/>
+        <TextBlock x:Uid="ParamsPage_Pseudo" Grid.Row="2" Grid.Column="0"  Text="Login :"  FontSize="16" VerticalAlignment="Center"/>
         <TextBox x:Name="txtPseudo" Grid.Row="2" Grid.Column="1" FontSize="16" Margin="10,0,0,10" InputScope="Url" Grid.ColumnSpan="2" />
 
 

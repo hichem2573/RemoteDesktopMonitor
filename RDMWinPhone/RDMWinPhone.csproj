@@ -90,6 +90,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extension\IListExtensions.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="MVVM\ViewModels\MonitorViewModel.cs" />
     <Compile Include="MVVM\ViewModels\UserViewModel.cs" />
     <Compile Include="MVVM\ViewModels\ViewModelBase.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="MVVM\Views\ParamsPage.xaml.cs">
       <DependentUpon>ParamsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ParamsApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +138,18 @@
     </Page>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <PRIResource Include="Chaines\en\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Chaines\fr-FR\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Chaines\en\Messages.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Chaines\fr-FR\Messages.resw" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

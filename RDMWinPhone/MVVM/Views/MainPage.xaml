@@ -10,9 +10,9 @@
 
     <Page.BottomAppBar>
         <CommandBar ClosedDisplayMode="Minimal">
-            <AppBarButton x:Name="mnuParams" x:Uid="MainPage_MnuParams"  Icon="Setting"  Label="Params" />
-            <AppBarButton x:Name="mnuSynchro" x:Uid="MainPage_MnuSync" Icon="Refresh" Label="Synchro" />
-            <AppBarButton x:Name="mnuQuitter" x:Uid="MainPage_MnuQuit" Icon="ViewAll"  Label="Quit" Margin="55,0,0,0" />
+            <AppBarButton x:Name="mnuParams" x:Uid="MainPage_MnuParams"  Icon="Setting"  Label="Params" Click="mnuParams_Click"  />
+            <AppBarButton x:Name="mnuSynchro" x:Uid="MainPage_MnuSync" Icon="Refresh" Label="Synchro" Click="mnuSynchro_Click"  />
+            <AppBarButton x:Name="mnuQuitter" x:Uid="MainPage_MnuQuit" Icon="ViewAll"  Label="Quit" Margin="55,0,0,0" Click="mnuQuitter_Click"  />
         </CommandBar>
     </Page.BottomAppBar>
 
