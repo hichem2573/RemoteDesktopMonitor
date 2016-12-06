@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
 
-  <Identity Name="228c6b7d-2570-458e-9d38-8fcda22db61a"
+  <Identity Name="72a39123-fe26-4295-9873-762cf3a367e7"
             Publisher="CN=cdi8tebb"
             Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="228c6b7d-2570-458e-9d38-8fcda22db61a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="72a39123-fe26-4295-9873-762cf3a367e7" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>RDMWinPhone</DisplayName>

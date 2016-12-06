@@ -10,13 +10,13 @@ namespace RDMWinPhone
     {
         public static void AddSorted<T>(this IList<T> collection, T item, bool orderDescending = false, IComparer<T> comparer = null)
         {
-            if(comparer == null && !(item is IComparer<T>))
+            if (comparer == null && !(item is IComparer<T>))
             {
                 collection.Add(item);
             }
             else
             {
-                if(comparer == null)
+                if (comparer == null)
                 {
                     comparer = Comparer<T>.Default;
                 }
@@ -25,14 +25,14 @@ namespace RDMWinPhone
 
                 if (!orderDescending)
                 {
-                    while(index < collection.Count && comparer.Compare(collection[index], item) > 0)
+                    while (index < collection.Count && comparer.Compare(collection[index], item) > 0)
                     {
                         index++;
                     }
                 }
                 else
                 {
-                    while(index < collection.Count && comparer.Compare(collection[index], item) < 0)
+                    while (index < collection.Count && comparer.Compare(collection[index], item) < 0)
                     {
                         index++;
                     }

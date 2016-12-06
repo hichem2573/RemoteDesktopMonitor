@@ -48,19 +48,30 @@ namespace RDMClient
         private async void btConnecter_Click(object sender, EventArgs e)
         {
             pnlConnexion.Enabled = false;
-            RdmDalWSRResult ret = await _rdmDal.LoginAsync(CancellationToken.None);
+            RdmDalWSRResult ret1 = await _rdmDal.LoginAsync(CancellationToken.None);
 
-            if (ret.IsSuccess)
+            if (ret1.IsSuccess)
             {
                 txtWebService.Enabled = false;
-                txtPseudo.Enabled = false;
-                txtPassword.Text = (string)ret.Data;
+                txtPseudo.Enabled = true;
+                txtPassword.Text = (string)ret1.Data;
                 lblErreur.Text = "Vous êtes connecté";
             }
             else
             {
-                lblErreur.Text = ret.ErrorMessage;
+                lblErreur.Text = ret1.ErrorMessage;
             }
+            RdmDalWSRResult ret2 = await _rdmDal.GetPseudosAsync(CancellationToken.None);
+
+            if (ret2.IsSuccess && _rdmDal.IsLogged)
+            {
+                AfficheListPseudos(ret2);
+            }
+            else
+            {
+                lblErreur.Text = ret2.ErrorMessage;
+            }
+
 
             pnlConnexion.Enabled = true;
         }
@@ -68,15 +79,15 @@ namespace RDMClient
         private async void btDeconnecter_Click(object sender, EventArgs e)
         {
             pnlConnexion.Enabled = false;
-            RdmDalWSRResult ret = await _rdmDal.LogoutAsync(CancellationToken.None);
+            RdmDalWSRResult ret1 = await _rdmDal.LogoutAsync(CancellationToken.None);
 
-            if (ret.IsSuccess)
+            if (ret1.IsSuccess)
             {
                 lblErreur.Text = "Vous n'êtes pas connecté";
             }
             else
             {
-                lblErreur.Text = "Vous n'êtes pas connecté" + ret.ErrorMessage;
+                lblErreur.Text = "Vous n'êtes pas connecté" + ret1.ErrorMessage;
             }
             pnlConnexion.Enabled = true;
             lstbPseudos.Items.Clear();
@@ -109,11 +120,10 @@ namespace RDMClient
                 {
                     lstbPseudos.Items.Add(pseudo);
                 }
-
             }
 
             // suppression pseudo de la liste 
-            for(int i = lstbPseudos.Items.Count -1 ; i >= 0; i++)
+            for(int i = lstbPseudos.Items.Count -1 ; i >= 0; i--)
             {
                 if (!lstret.Contains(lstbPseudos.Items[i]))
                 {
