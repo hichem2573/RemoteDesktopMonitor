@@ -8,50 +8,21 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--<Page.BottomAppBar>
-         <CommandBar>
-            <AppBarButton Icon="Setting" Label=" Parametre" />
-            <AppBarButton Icon="Sync" Label="Synchro" />
-            <AppBarButton Icon="Cancel" Label=" Quit"/>
-
-        </CommandBar>   
-    </Page.BottomAppBar>
-
-
-    <Grid x:Name="grdLst" Margin="5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <Button x:Name="btConnect"  Grid.Row="0"  Content="Connecter" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Top" FontSize="14"/>
-        <Button x:Name="btDisconnect"  Grid.Row="0"  Content="Deconnecter" HorizontalAlignment="Left" Margin="114,0,0,0" VerticalAlignment="Top"  FontSize="14"/>
-        <Button x:Name="btPhoto"  Grid.Row="0"  Content="Photo" HorizontalAlignment="Right" Margin="0,0,0,10" VerticalAlignment="Top" FontSize="14"/>
-
-        <TextBlock x:Name="lblTitre" Grid.Row="1" Text="Titre" HorizontalAlignment="Center" Margin="10,0,10,10" VerticalAlignment="Top" FontSize="18" Foreground="Azure" />
-
-        <ListView x:Name="lstvPseudos" Grid.Row="2"  Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" >
-
-        </ListView>-->
-
-        
-    <!--</Grid>-->
     <Page.BottomAppBar>
         <CommandBar ClosedDisplayMode="Minimal">
-            <AppBarButton x:Name="mnuParams"   Icon="ContactInfo"/>
+            <AppBarButton x:Name="mnuParams" x:Uid="MainPage_MnuParams"  Icon="Setting"  Label="Params" />
             <AppBarButton x:Name="mnuSynchro" x:Uid="MainPage_MnuSync" Icon="Refresh" Label="Synchro" />
-            <AppBarButton x:Name="mnuQuitter" x:Uid="MainPage_MnuQuit" Icon="ViewAll" Label="Quit" Margin="55,0,0,0"/>
+            <AppBarButton x:Name="mnuQuitter" x:Uid="MainPage_MnuQuit" Icon="ViewAll"  Label="Quit" Margin="55,0,0,0" />
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid x:Name="grdLst" Margin="5">
+    <Grid x:Name="grdLst" Margin="5" >
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MinHeight="54" />
-            <RowDefinition Height="Auto" MinHeight="82" />
-            <RowDefinition />
-            <RowDefinition Height="Auto" MinHeight="58.667" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Button x:Name="btConnect" x:Uid="MainPage_BtConnect" Grid.Row="0" Content="Connecter" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Height="58" Width="109"/>
@@ -68,6 +39,6 @@
 
         <TextBox x:Name="txtErreur" Grid.Row="3" IsReadOnly="True" Text="{Binding ErrorMessage}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="44" Margin="5,8.167,5,7" FontSize="14" TextWrapping="NoWrap" Background="{x:Null}" IsTabStop="False" Foreground="#FFE2FF00" BorderBrush="{x:Null}"/>
 
-    </Grid>
 
+    </Grid>
 </Page>
